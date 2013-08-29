@@ -1,0 +1,46 @@
+{
+  "name": "After the Deadline",
+  "version": "1.2",
+  "description": "Check spelling, style, and grammar in your browser",
+
+  "icons" : { "48" : "images/icon48.png",
+              "128" : "images/icon128.png" },
+
+  "page_action": {
+    "default_icon"  : "images/icon48.png",
+    "default_title" : "After the Deadline - Checks Spelling and Grammar",
+    "popup" : "action/disable.html"
+  },
+
+  "options_page": "options/options.html",
+  "background_page": "background.html",
+
+  "permissions": [
+     "tabs",
+     "https://service.afterthedeadline.com/*",
+     "https://de.service.afterthedeadline.com/*",
+     "https://en.service.afterthedeadline.com/*",
+     "https://es.service.afterthedeadline.com/*",
+     "https://fr.service.afterthedeadline.com/*",
+     "https://pt.service.afterthedeadline.com/*"
+   ],
+
+
+  "content_scripts": [
+  {
+      "matches": ["http://*/*", "https://*/*"],
+
+      "js": ["scripts/jquery-1.4.2.js",
+             "scripts/atd.core.js",
+             "scripts/jquery.atd.js",
+             "scripts/jquery.atd.proofreader.js",
+             "scripts/jquery.atd.div.js",
+             "scripts/jquery.atd.iframe.js",
+             "scripts/widget.js",
+	     "scripts/autoproof.js",
+             "scripts/atd-chrome.js"],
+ 
+     "all_frames": true,
+     "run_at": "document_end"
+  }]
+}

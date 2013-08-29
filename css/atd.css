@@ -1,0 +1,154 @@
+/* images converted to base64 courtesy of: http://webcodertools.com/imagetobase64converter/Create
+   *props* to Chrome for not providing a way to reference the current extensions resources from CSS.
+   Hard coding the ID does not work because the ID is different when packaged. Props Chrome, Props!!! */
+
+div.afterthedeadline-button
+{
+  position: absolute !important;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAANFJREFUeNrklMENgzAMRQPqCBxy4JARMkVOUQZkDOQDY2SIHLIFxVGpjKkDVJxaSwh9Bz9/yxHNPM/qzmj+HBhCwJdfHnilfN/3KqUEpGaXG8fxfdiyBgVmrfVrAguJLueswSYeVGDnrus8zSEsxigCcs50op1DRYuxAerVIWoO01qD6HBxhyNuNDpem9Dxp2lSHCYt5TC4s9pSLsN4tHfCJKAXvj2ESffwE9SfnYIDoQKHb4A7qHPuNKy2lAJAmDHm0i2obRkQNgwD/Nb/8CnAAEn1bI8kYlTuAAAAAElFTkSuQmCC) transparent no-repeat top left !important;
+  width: 20px !important;
+  height: 20px !important;
+  padding: 0px !important;
+  margin: 0px !important;
+  top: 0px;
+  left: 0px;
+}
+
+div.afterthedeadline-button.afterthedeadline-focus, div.afterthedeadline-button.afterthedeadline-hover, div.afterthedeadline-button:hover
+{
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAABCklEQVQ4EdWSMQ7CMAxFE+jAgBBiQLDToRNbxcY9QLCzM7HD1FtwEraKM3AIRoaKwkdyZKcOqFUXsrj/235x0tjBOjNtrk6bMLD+E1iyayjtbME1UprnWvwjo9lG6cZBylvO9ScPzxG8DwF8T2M4DLXQxfUcBAyfJ7c56gUQBm/GBtC0CTRfgN07B7FZxAu6o9gUJncWtEljNyE/fj9PjA9Do23ysLXJaIrKkSkRit9g6KkF/AVTgb3lXvw1mhS+dmeUpygmJBhFKvI1+VoUwMclc0+AIBR5TgORJ4AweSNgq/lWeNQYihUghwI2TcahXtVXgQQF7LibuGtQCZ7Z6GF7DCGDE4qqGuIF9ktf4BxMAREAAAAASUVORK5CYII=) !important;
+}
+
+div.afterthedeadline-button.afterthedeadline-done
+{
+  background-image: url(data:image/gif;base64,R0lGODlhDgAOAMIGAGwAAJoAANQAAPwADP8pKf+AZ////////yH5BAEKAAcALAAAAAAOAA4AAAMxeHEq3G8NdeZ6Rww76QPOFGZfZW7PBmBs2bLri8XYFbVBHtm1rsu5AEEWIRSIj6MsAQA7) !important;
+}
+
+/* AtD error styles */
+
+.hiddenSpellError
+{
+   border-bottom: 2px solid red !important;
+   cursor: pointer;
+}
+
+.hiddenGrammarError
+{
+   border-bottom: 2px solid green !important;
+   cursor: pointer;
+}
+
+.hiddenSuggestion
+{
+   border-bottom: 2px solid blue !important;
+   cursor: pointer;
+}
+
+/* Menu styles derived from:
+ * jquery.spellchecker.js - a simple jQuery Spell Checker
+ * Copyright (c) 2008 Richard Willis
+ * MIT license  : http://www.opensource.org/licenses/mit-license.php
+ * Project      : http://jquery-spellchecker.googlecode.com
+ */
+
+div.suggestmenu
+{
+   background: #fff;
+   position: absolute;
+   display: none;
+   z-index: 9999;
+   overflow: none;
+   margin-top: 1px;
+   text-align: left;
+   font-size: 12px;
+   font-family: Tahoma, Verdana, Arial, Helvetica;
+   cursor: default;
+}
+
+div.suggestmenu strong
+{
+   background: #ddd;
+   font-weight: bold;
+   padding:3px 6px 3px 6px;
+   display:block;
+   border:1px solid #ccc;
+   color: black;
+   cursor: default;
+}
+
+div.suggestmenu em
+{
+   text-align:center;
+   padding:3px 6px 3px 6px;
+   display:block;
+   border-top:1px solid #ccc;
+   border-left:1px solid #ccc;
+   cursor: default;
+}
+
+div.suggestmenu div
+{
+   background: #fff;
+   border-left:1px solid #bbb;
+   border-right:1px solid #bbb;
+   padding:3px 6px 3px 6px;
+   display:block;
+   margin:0px;
+   text-decoration:none;
+   color:#333;
+   outline:none
+   cursor: default;
+}
+
+div.suggestmenu div.first
+{
+   border-top:1px solid #ccc
+}
+
+.spell_sep_bottom
+{
+   border-bottom: 1px solid #ccc;
+}
+
+.spell_sep_top
+{
+   border-top: 1px solid #ccc;
+}
+
+div.suggestmenu div:hover
+{
+   color:#000;
+   background: #dbecf3
+}
+
+div.suggestmenu .foot
+{
+   border-top:1px solid #ddd;
+   background:#fff
+}
+
+div.suggestmenu .foot div
+{
+   outline:none
+}
+
+/* make it so AtD can work with TinyMCE */
+div #AtD_Content *
+{
+   white-space: pre-wrap !important;
+   overflow: visible !important;
+}
+
+/* make it so some font elements are inherited */
+div #AtD_Content div, div #AtD_Content p, div #AtD_Content span
+{
+   font-size: inherit !important;
+   font-family: inherit !important;
+   font-weight: inherit !important;
+   line-height: inherit !important;
+}
+
+span.mceItemHidden, span.hiddenSuggestion, span.hiddenSpellError, span.hiddenGrammarError
+{
+   float: none;
+}

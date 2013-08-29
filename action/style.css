@@ -1,0 +1,15 @@
+body {
+	width: 200px;
+        background: #fff;
+       	font: 14px "Lucida Grande", Arial, Helvetica, sans-serif;
+}
+a {
+       	color: #1390ec;
+}
+
+a:visited {
+       	color: #006;
+}
+a:hover {
+       	color: #000;
+}

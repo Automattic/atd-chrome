@@ -1,0 +1,420 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+a {
+	color: #1390ec;
+}
+ 
+a:visited {
+	color: #006;
+}
+ 
+a:hover {
+	color: #000;
+}
+ 
+body {
+	background: #fff;
+	font: 14px "Lucida Grande", Arial, Helvetica, sans-serif;
+	margin: 2em auto;
+	text-align: center;
+	line-height: 18px;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.centered {
+	text-align: center;
+}
+p {
+	margin: 0 0 10px 0;
+}
+
+
+#wrap {
+	width: 600px;
+	margin: 0 auto;
+	text-align: left;
+}
+
+
+#header {
+	float: left;
+	overflow: hidden;
+	margin: 0 0 20px 0;
+}
+#header h1 {
+	display:block;
+	height:47px;
+	width:246px;
+	float:left;
+	margin: 15px 0;
+	position: relative;
+}
+#header h1 a {
+	display:block;
+	width:100%;
+	height:100%;
+	outline:none;
+	text-decoration:none;
+	text-indent:-5000px;
+	background:url(../images/logo.gif) no-repeat 0
+}
+#header ul {
+	width: 800px;
+	float: left;
+	display: block;
+	height: 30px;
+	background: url(../images/topnav.gif) no-repeat top left;
+	list-style: none;
+	overflow: hidden;
+        padding: 0;
+}
+#header ul li {
+	float: left;
+	display: block;
+}
+#header ul li a{
+	float: left;
+	line-height: 30px;
+	height: 30px;
+	display: block;
+	padding: 0 10px;
+	border-right: 1px solid #d9d9d9;
+	color: #000;
+	text-decoration: none;
+}
+#header ul li a:hover, #header ul li a.selected {
+	background: url(../images/topnav.gif) no-repeat bottom;
+}
+#header ul .left a:hover, #header ul .left a.selected {
+	background: url(../images/topnav.gif) no-repeat bottom left;
+}
+#header ul li a.selected {
+	color: #1390ec;
+	font-weight: bold;
+	background: url(../images/topnav.gif) no-repeat bottom; /* used to have right here too */
+}
+#header ul .mya {
+	float: right;
+}
+#header ul .mya a
+{
+	border-left: 1px solid #d9d9d9;
+	border-right: none;
+}
+#header ul .mya a:hover {
+	background: url(../images/topnav.gif) no-repeat bottom right;
+}
+
+#header ul .mya a.selected
+{
+	background: url(../images/topnav.gif) no-repeat bottom right;
+}
+
+#header ul .mya span {
+	padding-left: 20px;
+	background: url(../images/myaccount.gif) no-repeat 0 -1px;
+}
+
+/** SPLASH **/
+.splash {
+	width: 780px;
+	height: 280px;
+	background: url(../images/splash.jpg) no-repeat 0 0;
+	display: block;
+	float: left;
+	padding: 10px;
+	font-size: 18px;
+	line-height: 22px;
+	margin: 0 0 20px 0;
+}
+.splash p {
+	width: 300px;
+	position: relative;
+	top: 85px;
+	left: 30px;
+	margin: 0;
+}
+.splash ul {
+	position: relative;
+	top: 95px;
+	left: 30px;
+	list-style: none;
+        padding: 0;
+}
+.splash ul li {
+	padding-left: 26px;	
+	background: url(../images/check.gif) no-repeat 0 3px;
+	line-height: 24px;
+	margin-bottom: 8px;
+}
+.download {
+	position: relative;
+	float: right;
+	top: 20px;
+	height: 77px;
+	width: 228px;
+	background: url(../images/download.png) no-repeat;
+	text-indent: -5000px;
+}
+
+/** Content **/
+#content {
+	width: 100%;
+	float: left;
+	overflow: hidden;
+	margin: 0 0 20px 0;
+}
+
+.c0 {
+	width: 780px;
+	padding: 0 10px;
+}
+
+.c1 {
+	width: 480px;
+	padding: 0 10px;
+}
+.c2 {
+	width: 280px;
+	padding: 0 10px;
+}
+.desc {
+	font-size: 17px;
+	line-height: 20px;
+}
+.desc strong {
+	color: #169a00;
+}
+.screenshot {
+	margin: 0 0 10px 50px;
+}
+h2 {
+	font-size: 22px;
+	line-height: 24px;
+	color: #169a00;
+	margin-bottom: 5px;
+        font-weight: normal;
+}
+h3 {
+	color: #0082dd;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 26px;
+	border-bottom: 5px solid #f4f4f4;
+	margin-bottom: 10px;
+}
+h4 {
+	color: #0082dd;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 22px;
+	margin-bottom: 10px;
+        margin-top: 10px;
+}
+
+
+.testimonials {
+	list-style: none;
+	margin: 10px 0;
+	float: left;
+        padding-left: 0;
+}
+.testimonials li {
+	float: left;
+	width: 100%;
+	margin-bottom: 10px;
+}
+.testimonials p {
+	margin: 0;
+}
+.testimonials span {
+	float: right;
+}
+
+
+.whitebox {
+	background: url(../images/whitebox.gif) no-repeat;
+	height: 10px;
+	width: 100%;
+	float: left;
+}
+.bottom {
+	background-position: bottom;
+}
+.top {
+	background-position: top;
+}
+.inline {
+	padding: 0 10px;
+	background: #fcfcfc;
+	border-right: 1px solid #e1e1e1;
+	border-left: 1px solid #e1e1e1;
+	float: left;
+	width: 258px;
+}
+.help ul {
+	list-style: none;
+	margin-bottom: 10px;
+}
+
+
+#footer {
+	background: url(../images/footer-bg.gif) no-repeat top left;
+	width: 780px;
+	height: 30px;
+	padding: 0 10px;
+	line-height: 30px;
+	float: left;
+	margin: 10px 0 20px;
+	color: #898989;
+}
+#footer ul {
+	list-style: none;
+        padding: 0;
+}
+#footer ul li {
+	float: left;
+	margin-right: 10px;
+}
+
+
+.checked {
+	list-style: none;
+	margin: 0 0 10px 0;
+}
+.checked li {
+	padding-left: 25px;
+	background: url(../images/smallcheck.gif) no-repeat top left;
+	line-height: 22px;
+	margin-bottom: 5px;
+}
+
+
+.t1 {
+	width: 100%;
+        margin-top: 5px;
+	border-top: 1px solid #d4e1c9;
+	border-bottom: 1px solid #d4e1c9;
+	margin-bottom: 10px;
+}
+.t1 th {
+	background: #f4fdec;
+	border-bottom: 5px solid #c7e5ac;
+	padding: 5px;
+	text-align: left;
+}
+.t1 td {
+	text-align: left;
+	padding: 2px;
+}
+.t1 .alt {
+	background: #efefef;
+}
+
+img
+{
+   border: none;
+}
+
+ol, ul
+{
+   padding-left: 2em;
+   padding-bottom: 0.5em;
+   padding-top: 0.5em;
+}
+
+blockquote
+{
+   padding-left: 4em;
+   padding-bottom: 0.5em;
+   padding-top: 0.5em;
+}
+
+/* error stuff */
+
+div.error
+{
+   background: #ffdede;
+   border: solid 1px red;
+}
+
+div.good
+{
+   background: #c9eaff;
+   border: solid 1px #1291e9;
+}
+
+div.error, div.good
+{
+   padding-top: 5px;
+   padding-bottom: 5px;
+   margin-bottom: 10px;
+   margin-top: 5px;
+   padding-left: 10px;
+   padding-right: 10px;
+}
+
+div.error h3, div.good h3
+{
+   font-size: 125%;
+   color: black;
+   border-bottom: none;
+}
+
+div.error p, div.error h3, div.good p, div.good h3
+{
+   margin: 0;
+   padding: 0;
+}
+
+.options
+{
+   list-style: none;
+}
+
+.removeme
+{
+   background: url(xit.gif) no-repeat 0px 3px;
+   display: inline-block;
+   color: transparent;
+   width: 10px;
+   height: 15px;
+}
+
+.removeme:hover
+{
+   background: url(xit.gif) no-repeat -10px 3px;
+}
+
+#content ul li {
+   padding-bottom: 2px;
+}
+
+input {
+   font: 14px "Lucida Grande", Arial, Helvetica, sans-serif;
+}
+
+/* what's a little CSS amongst friends */
+#key {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  height: 24px;
+  text-align: center;
+  padding: 5px;
+  width: 160px;
+  margin-top: 1px;
+  margin-bottom: 4px;
+}
+#key:focus {
+  border-radius: 11px;
+  background-color: #ccc;
+  border: 1px solid #333;
+  outline: none;
+}
+
