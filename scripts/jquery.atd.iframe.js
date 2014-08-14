@@ -1,25 +1,42 @@
 function AtD_IFRAME_isExempt(nodez) {
-        if (typeof CKEditor !== 'undefined')
-                return true;
+  if (typeof CKEditor !== 'undefined')
+    return true;
 
 	var node = nodez.context;
 
-	/* disable on draft.blogger.com WYSIWYG editor--too buggy */
-	if (node.id == 'postingComposeBox') 
-		return true;
+  /*
+    node.contentDocument can throw SecurityError if frame is from another domain.
 
-        if (node.contentDocument == undefined || node.contentDocument.body == undefined)
-                return true;
+    Uncaught SecurityError: Failed to read the 'contentDocument' property from 'HTMLIFrameElement':
+    Blocked a frame with origin "http://www.aliexpress.com" from accessing a frame with origin "http://static.ak.facebook.com".
+    The frame being accessed set "document.domain" to "facebook.com", but the frame requesting access did not.
+    Both must set "document.domain" to the same value to allow access.
 
-        if (node.contentDocument.designMode == 'on' || node.contentDocument.body.designMode == 'on')
-                return false;
+    TODO: investigate what spellchecker is doing with iframe
 
-        if (node.contentDocument.body.contentEditable == 'true')
-                return false;
+    node.contentWindow.document can be used to access content, but i'm not shure. Other uses should be updated either.
+  */
+  try {
+    /* disable on draft.blogger.com WYSIWYG editor--too buggy */
+    if (node.id == 'postingComposeBox')
+      return true;
 
-        /* hack to make editor work with Yahoo Mail immediately */
-        if (/compArea/.test(node.id))
-                return false;
+    if (node.contentDocument == undefined || node.contentDocument.body == undefined)
+      return true;
+
+    if (node.contentDocument.designMode == 'on' || node.contentDocument.body.designMode == 'on')
+      return false;
+
+    if (node.contentDocument.body.contentEditable == 'true')
+      return false;
+
+    /* hack to make editor work with Yahoo Mail immediately */
+    if (/compArea/.test(node.id))
+      return false;
+  }catch (e) {
+    if (!e instanceof DOMException || e.name != 'SecurityError')
+      throw e
+  }
 
 	return true;
 };
