@@ -59,3 +59,15 @@ function home() {
 function options() {
 	goTo('chrome-extension://' + location.hostname + '/options/options.html');
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    var disable = document.getElementById("__disable");
+    if (disable != null)
+      disable.addEventListener('click', __disable);
+    var enable  = document.getElementById("__enable" );
+    if (enable != null)
+      enable.addEventListener('click', __enable );
+
+    document.getElementById("options"  ).addEventListener('click', options  );
+    document.getElementById("home"     ).addEventListener('click', home     );
+});
